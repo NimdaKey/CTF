@@ -1,3 +1,6 @@
+refer to: http://mslc.ctf.su/wp/codegate-2014-quals-angry-doraemon-pwn-250/
+
+
 server$ ./angry
 
 server port: 8888
