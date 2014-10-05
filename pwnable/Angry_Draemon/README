@@ -13,6 +13,7 @@ essential file: key, mouse.txt, doraemon.txt
 gdb command
 
 shell$ sudo gdb --pid 5078      # attach to process (need root)
+(gdb)$ set follow-fork-mode child
 (gdb)$ b *0x804eab
 (gdb)$ b execl
 (gdb)$ next      # n   (step over)
