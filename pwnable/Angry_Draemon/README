@@ -8,3 +8,13 @@ server$ ./angry
 server port: 8888
 
 essential file: key, mouse.txt, doraemon.txt
+===============================================================================================
+
+gdb command
+
+(gdb)$ b *0x804eab
+(gdb)$ b execl
+(gdb)$ next      # n   (step over)
+(gdb)$ step      # s   (step in)
+(gdb)$ continue  # c   (F5)
+(gdb)$ disass main
