@@ -1,4 +1,5 @@
 import telnetlib
+import struct
 import re
 
 class tio(telnetlib.Telnet):
@@ -11,6 +12,18 @@ class tio(telnetlib.Telnet):
     def read_until_re(self,pattern):
         content = self.io.read_all()
         return re.search(pattern, content)
+        
+def l32(data):
+    return struct.pack("<I",data)
+
+def l64(data):
+    return struct.pack("<Q",data)
+
+def b32(data):
+    return struct.pack(">I",data)
+
+def b64(data):
+    return struct.pack(">Q",data)
         
 '''
 # usage:
