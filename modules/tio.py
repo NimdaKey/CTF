@@ -3,14 +3,14 @@ import struct
 import re
 
 class tio(telnetlib.Telnet):
-    def __init__(self,host='127.0.0.1',port=23, timeout=30):
-        self.io=telnetlib.Telnet.__init__(self,host,port,timeout)
+    def __init__(self,host='127.0.0.1',port=23, timeout=0.5):
+        telnetlib.Telnet.__init__(self,host,port,timeout)
 
     def send(self,data):
-        return self.io.write(data)
+        return self.write(data+'\n')
 
     def read_until_re(self,pattern):
-        content = self.io.read_all()
+        content = self.read_all()
         return re.search(pattern, content)
         
 def l32(data):
